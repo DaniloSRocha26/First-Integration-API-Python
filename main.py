@@ -6,8 +6,11 @@ def fetch_data(endpoint):
 
     return response.json() if response.status_code == 200 else None
 
+user_pokemon = input("Digite o nome de um pokemon: ")
 
-pokemon = fetch_data("pokemon/pikachu")
+
+pokemon = fetch_data(f"pokemon/{user_pokemon}")
+
 
 if pokemon:
     print(pokemon)
